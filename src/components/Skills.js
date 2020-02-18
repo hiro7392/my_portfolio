@@ -10,7 +10,7 @@ const Skills:React.FC=()=>{
       <div className="skills">
 
 
-      <h1>My Skills</h1>
+      <h1 className="title">My Skills</h1>
       <h2>資格</h2>
       <a>2019.10</a>
       <p>基本情報技術者試験</p>
@@ -23,7 +23,7 @@ const Skills:React.FC=()=>{
 
       <h2>語学</h2>
       <a>2019.4</a>
-      <p>TOEIC 850</p>
+      <p>TOEIC(L&R) 850</p>
 
        </div>
 

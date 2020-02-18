@@ -22,7 +22,22 @@ body {
   color:white;
 }
 .Profile{
-  margin:15% auto;
+  margin:30% auto;
+}
+.name{
+  margin:10% auto;
+}
+
+.title{
+  color:green;
+  font-family:sans-serif;
+}
+.skills{
+  margin:10% auto;
+}
+
+.about_title{
+  color:rgba(250,100,10,1);
 }
 /*
 .btn{
