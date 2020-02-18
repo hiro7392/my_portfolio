@@ -1,0 +1,117 @@
+body {
+  font-family: 'Times New Roman','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
+
+}
+
+.main{
+  width:80%;
+  height:80%;
+  padding:5% 0% ;
+
+  margin:auto auto;
+  background: rgba(20, 20, 52, 0.9);
+  text-align:center;
+
+
+  border-radius: 15px;
+}
+.contents{
+  position:relative;
+  z-index:1;
+  opacity:0.9;
+  color:white;
+}
+.Profile{
+  margin:15% auto;
+}
+/*
+.btn{
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  height: 48px;
+  border-radius: 48px;
+  margin-right: 24px;
+  margin-left: 24px;
+  color: #fff;
+  background-color: #66ccff;
+  border: none;
+  outline: none;
+  box-shadow: 4px 4px #d8d8d8;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+*/
+.btn {
+
+  padding: 1% 2%;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: all 0.5s;
+  cursor:pointer;
+  margin-left:2%;
+  border-color: rgba(20, 20, 52, 0.9);
+}
+
+.btn:active{
+  border-color: inherit;
+}
+.headlinks{
+  margin-left:10px;
+}
+
+.English{
+  opacity:0.5;
+
+}
+
+.about{
+  background-color:rgba(150,10,150,1);
+}
+
+.Skills{
+  background-color:rgba(40,255,100,1);
+}
+.links{
+  font-size: 15px;
+}
+.products{
+  background-color:rgba(250,100,10,1);
+}
+.github{
+  background-color: rgba(150,10,150,1);
+  border-radius: 10px;
+}
+.twitter{
+  background-color: rgba(40,200,250,1);
+  border-radius: 10px;
+}
+.AtCoder{
+  background-color:rgba(255,255,255,1);
+  color:black;
+
+}
+.HatenaBlog{
+  background-color:rgba(40,255,100,1);
+}
+/*
+.btn:active {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  box-shadow: none;
+}
+*/
+
+@media screen and (max-width:420px){
+    .Eng{
+    display:none;
+  }
+
+
+}

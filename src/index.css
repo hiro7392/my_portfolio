@@ -1,13 +1,51 @@
 body {
-  margin: 0;
+  /*margin: 0;
+  color:blue;
+  /*
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:rgba(150, 250, 100, 0.8);*/
+  background-image:url(https://media-cdn.tripadvisor.com/media/photo-p/12/20/b3/da/barton-fish-chips.jpg);
+  background-size: cover;
+
+}
+.title{
+  color:blue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.App {
+  text-align: center;
+  /*background-color: #E7EDDB;*/
+  color:blue;
+  min-height: 100vh;
+	background-image:
+	 radial-gradient(#feb159 1px, transparent 1px);
+	background-size: 20px 20px;
+}
+
+.button{
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  height: 48px;
+  border-radius: 48px;
+  margin-right: 24px;
+  margin-left: 24px;
+  color: #fff;
+  background-color: #66ccff;
+  border: none;
+  outline: none;
+  box-shadow: 4px 4px #d8d8d8;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
 }
