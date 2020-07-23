@@ -1,5 +1,7 @@
 import React from 'react';
-//import Contentbox from './Contentbox';
+//import { withRouter } from 'react-router';
+//import { Link } from "react-router-dom";
+import Contentbox from './Contentbox';
 //import {View } from 'react-native';
 //import { Ionicons, FontAwesome } from "@expo/vector-icons";
 //import Icon from 'react-native-vector-icons/FontAwesome';
@@ -26,19 +28,18 @@ class App extends React.Component{
         this.setState({openNumber:2});
       }
 
+      moveToLink(url){
+        this.props.history.push(url);
+      }
+
+
 
     render()
     {
-      let now;
-      if(this.state.openNumber===0){
-        now=<Profile/>;
-      }
-      if(this.state.openNumber===1){
-        now=<Skills/>;
-      }
-      if(this.state.openNumber===2){
-        now=<Products/>;
-      }
+      let home=<Profile/>;
+      let skill=<Skills/>;
+      let about=<Products/>;
+      
 
 
       return (
@@ -50,21 +51,26 @@ class App extends React.Component{
         </div>
         <div className="contents">
 
-          {now}
-
+          
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{skill}</div>
+          <div style={{display:this.state.openNumber!==2 ? 'none' : '' }}>{about}</div>
+          <div>{home}</div>
+          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{skill}</div>
+          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{about}</div>
+          
         </div>
             <div className="links">
             <button className="btn github links">Github</button>
-            <button className="btn twitter links" href="https://twitter.com/fish0504_">Twitter</button>
-            <button className="btn HatenaBlog links" href="https://atcoder.jp/users/fish0504">Hatena Blog</button>
+            <button className="btn twitter links" onClick={()=>{this.moveToLink("https://twitter.com/fish0504_")}}>Twitter</button>
+            <button className="btn HatenaBlog links" Link="https://atcoder.jp/users/fish0504_">Hatena Blog</button>
             <button className="btn AtCoder links"><span class="fas fa-at"></span>AtCoder</button>
             </div>
-       </div>
+      </div>
 
-     );
-   }
+    );
+  }
 
 }
-
-
+//
+//<Link to="https://twitter.com/fish0504_"><button className="btn twitter links">Twitter</button></Link>
 export default App;

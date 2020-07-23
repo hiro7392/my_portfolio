@@ -10,7 +10,7 @@ body {
   background:rgba(150, 250, 100, 0.8);*/
   background-image:url(https://media-cdn.tripadvisor.com/media/photo-p/12/20/b3/da/barton-fish-chips.jpg);
   background-size: cover;
-
+  
 }
 .title{
   color:blue;
@@ -18,7 +18,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 .App {
   text-align: center;
@@ -26,10 +26,13 @@ code {
   color:blue;
   min-height: 100vh;
 	background-image:
-	 radial-gradient(#feb159 1px, transparent 1px);
-	background-size: 20px 20px;
+	radial-gradient(#feb159 1px, transparent 1px);
+	background-size: 5% 10%;
 }
-
+.my_name{
+  font-size: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .button{
   display: inline-block;
   font-size: 16px;
@@ -47,5 +50,5 @@ code {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
+  
 }

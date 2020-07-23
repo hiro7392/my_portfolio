@@ -19,7 +19,7 @@ const Skills:React.FC=()=>{
       <a>2019.3</a>
       <p>AI検定G検定</p>
       <h2>競技プログラミング</h2>
-      <p>AtCoder緑(max-rating:952)</p>
+      <p>AtCoder緑(max-rating:1132)</p>
 
       <h2>語学</h2>
       <a>2019.4</a>

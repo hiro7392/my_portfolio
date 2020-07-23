@@ -1,12 +1,11 @@
 body {
   font-family: 'Times New Roman','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
-
 }
 
 .main{
-  width:80%;
+  width:60%;
   height:80%;
-  padding:5% 0% ;
+  padding:3% 3% ;
 
   margin:auto auto;
   background: rgba(20, 20, 52, 0.9);
@@ -22,10 +21,10 @@ body {
   color:white;
 }
 .Profile{
-  margin:30% auto;
+  margin:25% auto;
 }
 .name{
-  margin:10% auto;
+  margin:5% auto;
 }
 
 .title{
@@ -38,6 +37,7 @@ body {
 
 .about_title{
   color:rgba(250,100,10,1);
+  font-family:sans-serif;
 }
 /*
 .btn{
@@ -77,7 +77,7 @@ body {
   border-color: inherit;
 }
 .headlinks{
-  margin-left:10px;
+  margin-left:5%;
 }
 
 .English{
@@ -85,6 +85,9 @@ body {
 
 }
 
+.home_name{
+  color:rgba(150,10,150,1);
+}
 .about{
   background-color:rgba(150,10,150,1);
 }
