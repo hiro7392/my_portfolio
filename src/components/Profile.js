@@ -1,6 +1,6 @@
 import React from 'react';
 //import "status1.png";
-const Profile:React.FC=()=>{
+const Profile=()=>{
 
     return (
       <div className="Profile">

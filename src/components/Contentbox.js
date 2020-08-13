@@ -1,8 +1,8 @@
 import React from 'react';
 
-type IContent = {
-    content: JSX.Element,
-}
+export type IContent = {
+    content: JSX.Element;
+};
 
 const Contentbox: React.FC<IContent> = (props) => {
     return (

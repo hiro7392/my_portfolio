@@ -1,9 +1,6 @@
 import React from 'react';
 
-const Skills:React.FC=()=>{
-
-
-
+const Skills=()=>{
 
 
     return (
@@ -25,7 +22,7 @@ const Skills:React.FC=()=>{
       <a>2019.4</a>
       <p>TOEIC(L&R) 850</p>
 
-       </div>
+      </div>
 
     );
 
