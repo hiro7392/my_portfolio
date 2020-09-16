@@ -39,6 +39,9 @@ body {
   color:rgba(250,100,10,1);
   font-family:sans-serif;
 }
+.home_name{
+  font-family:sans-serif;
+}
 /*
 .btn{
   display: inline-block;
@@ -60,7 +63,8 @@ body {
 }
 */
 .btn {
-
+  font-family:sans-serif;
+  font-weight: 10;
   padding: 1% 2%;
   color: white;
   display: inline-block;

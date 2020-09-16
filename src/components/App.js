@@ -8,6 +8,8 @@ import Contentbox from './Contentbox';
 import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 class App extends React.Component{
@@ -32,14 +34,14 @@ class App extends React.Component{
         this.props.history.push(url);
       }
 
-
-
+      
     render()
     {
       let home=<Profile/>;
       let skill=<Skills/>;
       let about=<Products/>;
       
+
 
 
       return (
@@ -59,12 +61,14 @@ class App extends React.Component{
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{about}</div>
           
         </div>
+        <BrowserRouter>
             <div className="links">
-            <button className="btn github links">Github</button>
-            <button className="btn twitter links" onClick={()=>{this.moveToLink("https://twitter.com/fish0504_")}}>Twitter</button>
-            <button className="btn HatenaBlog links" Link="https://atcoder.jp/users/fish0504_">Hatena Blog</button>
-            <button className="btn AtCoder links"><span class="fas fa-at"></span>AtCoder</button>
+            
+            <a className="btn github links" href="https://github.com/fish0504"><FontAwesomeIcon icon="check-square" />github</a>
+            <a className="btn twitter links" href="https://twitter.com/fish0504_">Twitter</a>
+            <a className="btn AtCoder links" href="https://atcoder.jp/users/fish0504">AtCoder</a>
             </div>
+        </BrowserRouter>
       </div>
 
     );
