@@ -9,9 +9,13 @@ import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { fas } from "@fortawesome/free-solid-svg-icons"; 
+import { library } from '@fortawesome/fontawesome-svg-core';
 
+library.add(fab,fas);
 class App extends React.Component{
 
     constructor(props) {
@@ -62,11 +66,10 @@ class App extends React.Component{
           
         </div>
         <BrowserRouter>
-            <div className="links">
-            
-            <a className="btn github links" href="https://github.com/fish0504"><FontAwesomeIcon icon="check-square" />github</a>
-            <a className="btn twitter links" href="https://twitter.com/fish0504_">Twitter</a>
-            <a className="btn AtCoder links" href="https://atcoder.jp/users/fish0504">AtCoder</a>
+            <div className="links">            
+            <a className="btn github links" href="https://github.com/fish0504"><FontAwesomeIcon icon={['fab','github']}/></a>
+            <a className="btn twitter links" href="https://twitter.com/fish0504_"><FontAwesomeIcon icon={['fab','twitter']}/></a>
+            <a className="btn AtCoder links" href="https://atcoder.jp/users/fish0504"><FontAwesomeIcon icon={['fas','chess-knight']}/></a>
             </div>
         </BrowserRouter>
       </div>

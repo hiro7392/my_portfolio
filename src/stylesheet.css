@@ -100,7 +100,8 @@ body {
   background-color:rgba(40,255,100,1);
 }
 .links{
-  font-size: 15px;
+  margin-top: 5%;
+  font-size: 25px;
 }
 .products{
   background-color:rgba(250,100,10,1);
@@ -116,7 +117,7 @@ body {
 .AtCoder{
   background-color:rgba(255,255,255,1);
   color:black;
-
+  font:15px;
 }
 .HatenaBlog{
   background-color:rgba(40,255,100,1);
