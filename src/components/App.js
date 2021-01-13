@@ -60,7 +60,7 @@ class App extends React.Component{
           
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{skill}</div>
           <div style={{display:this.state.openNumber!==2 ? 'none' : '' }}>{about}</div>
-          <div>{home}</div>
+          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{skill}</div>
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{about}</div>
           
