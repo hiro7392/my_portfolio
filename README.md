@@ -1,10 +1,10 @@
 ## 自己紹介用のページです
 ここからアクセスできます
-https://master.d2wgpjrlrnlc76.amplifyapp.com/
+  https://master.d2wgpjrlrnlc76.amplifyapp.com/
 
 Reactで勉強をかねて作成しました
 AWS Amplifyにデプロイしてあります
-https://aws.amazon.com/jp/amplify/console/
+  https://aws.amazon.com/jp/amplify/console/
 
 
 ### `yarn start`
