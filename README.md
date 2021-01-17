@@ -1,8 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 自己紹介用のページです
+https://master.d2wgpjrlrnlc76.amplifyapp.com/
 
-## Available Scripts
+Reactで勉強をかねて作成しました
+AWS Amplifyにデプロイしてあります
+https://aws.amazon.com/jp/amplify/console/
 
-In the project directory, you can run:
+以下yarnの説明です
 
 ### `yarn start`
 
