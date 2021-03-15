@@ -17,7 +17,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(fab,fas);
 class App extends React.Component{
-
+    
     constructor(props) {
       super(props);
       // stateを定義してください
@@ -37,7 +37,7 @@ class App extends React.Component{
       moveToLink(url){
         this.props.history.push(url);
       }
-
+      
       
     render()
     {

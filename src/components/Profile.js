@@ -4,13 +4,13 @@ const Profile=()=>{
 
     return (
       <div className="Profile">
-      <h1 className="home_name">home</h1>
-      <h2 className="my_name">fish</h2>
+      <h1 className="home_name">千里の道も一歩から</h1>
+      <h2 className="my_name">Mountain</h2>
       
-      <h2 className="English name">@fish0504_</h2>
+      
 
-      <h3>広島大学</h3>
-      <p>工学部二類 4年</p>
+      <h3></h3>
+      <p>週間記録アプリ</p>
       
       <div className="English">
       <h3>Hiroshima University</h3>
