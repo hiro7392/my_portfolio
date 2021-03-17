@@ -20,6 +20,7 @@ class App extends React.Component{
     
     constructor(props) {
       super(props);
+      
       // stateを定義してください
       this.state={openNumber:0};
 
