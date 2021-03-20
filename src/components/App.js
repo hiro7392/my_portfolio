@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 //import { withRouter } from 'react-router';
@@ -59,19 +61,19 @@ class App extends React.Component{
       <div className="main">
         <div className="headlinks">
           <button onClick={()=>{this.clickProfile()}} className="btn about">Home</button>
-          <button onClick={()=>{this.clickSkills()}}  className="btn Skills">Skills</button>
-          <button onClick={()=>{this.clickProducts()}} className="btn products">About</button>
+          <button onClick={()=>{this.clickSkills()}}  className="btn Skills">List</button>
+          <button onClick={()=>{this.clickProducts()}} className="btn products">Chart</button>
         </div>
         <div className="contents">
 
           
           
-          <div style={{display:this.state.openNumber!==2 ? 'none' : '' }}>{about}</div>
+          
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
-          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{about}</div>
+          
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{lader}</div>
-
+          {about}
         </div>
         <BrowserRouter>
             <div className="links">            

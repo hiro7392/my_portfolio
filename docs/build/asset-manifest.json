@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0d0ef410.chunk.css",
+    "main.js": "/static/js/main.4892b54f.chunk.js",
+    "main.js.map": "/static/js/main.4892b54f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a92b161d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a92b161d.js.map",
+    "static/js/2.6b1f9a5b.chunk.js": "/static/js/2.6b1f9a5b.chunk.js",
+    "static/js/2.6b1f9a5b.chunk.js.map": "/static/js/2.6b1f9a5b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9e53617b585824a8e9dfb63aa47d715f.js": "/precache-manifest.9e53617b585824a8e9dfb63aa47d715f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0d0ef410.chunk.css.map": "/static/css/main.0d0ef410.chunk.css.map",
+    "static/js/2.6b1f9a5b.chunk.js.LICENSE.txt": "/static/js/2.6b1f9a5b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/takenoko.0572b606.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a92b161d.js",
+    "static/js/2.6b1f9a5b.chunk.js",
+    "static/css/main.0d0ef410.chunk.css",
+    "static/js/main.4892b54f.chunk.js"
+  ]
+}
