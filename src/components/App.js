@@ -1,4 +1,5 @@
 import React from 'react';
+
 //import { withRouter } from 'react-router';
 //import { Link } from "react-router-dom";
 import Contentbox from './Contentbox';
@@ -8,6 +9,8 @@ import Contentbox from './Contentbox';
 import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
+//import InputForm from './Firebase';
+import GradeRader from './Rader';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,9 +18,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons"; 
 import { library } from '@fortawesome/fontawesome-svg-core';
 
+
 library.add(fab,fas);
+
+
 class App extends React.Component{
-    
     constructor(props) {
       super(props);
       
@@ -38,18 +43,19 @@ class App extends React.Component{
       moveToLink(url){
         this.props.history.push(url);
       }
+
       
-      
+    
     render()
     {
       let home=<Profile/>;
       let skill=<Skills/>;
       let about=<Products/>;
+      let lader=<GradeRader/>;
       
 
-
-
       return (
+        
       <div className="main">
         <div className="headlinks">
           <button onClick={()=>{this.clickProfile()}} className="btn about">Home</button>
@@ -59,12 +65,13 @@ class App extends React.Component{
         <div className="contents">
 
           
-          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{skill}</div>
+          
           <div style={{display:this.state.openNumber!==2 ? 'none' : '' }}>{about}</div>
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
-          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{skill}</div>
-          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{about}</div>
           
+          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{about}</div>
+          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{lader}</div>
+
         </div>
         <BrowserRouter>
             <div className="links">            
@@ -74,7 +81,9 @@ class App extends React.Component{
             </div>
         </BrowserRouter>
       </div>
-
+      
+    
+  
     );
   }
 

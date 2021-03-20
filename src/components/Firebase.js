@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { pushMessage } from "../firebase"
 
-const App = () => {
+const InputForm = () => {
     const [name, setName] = useState("default")
     const [text, setText] = useState("text")
     return (
@@ -24,4 +23,4 @@ const App = () => {
     )
 }
 
-export default App
+export default InputForm
