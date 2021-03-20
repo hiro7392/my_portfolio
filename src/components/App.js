@@ -12,16 +12,17 @@ import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
 import List from "./List";
-
+import Add from "./Add";
+import Delete from "./Delete"
 
 //import InputForm from './Firebase';
 import GradeRader from './Rader'; //レーダーチャート用
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { fas } from "@fortawesome/free-solid-svg-icons"; 
 import { library } from '@fortawesome/fontawesome-svg-core';
+
 //import firebase from "firebase/app";
 import firebase from "firebase";
 library.add(fab,fas);
@@ -46,24 +47,37 @@ class App extends React.Component{
     constructor(props) {
       super(props);
       // stateを定義してください
-      this.state={openNumber:0};
+      this.state={openNumber:0,
+                  showProfile:false
+      };
     }
       
       
       
       clickProfile(){
         this.setState({openNumber:0});
+        this.setState({showProfile:false});
         //this.getUserId("sakana")
       }
       clickSkills(){
         this.setState({openNumber:1});
+        this.setState({showProfile:false});
       }
       clickProducts(){
         this.setState({openNumber:2});
+        this.setState({showProfile:false});
       }
 
       moveToLink(url){
         this.props.history.push(url);
+      }
+      switchProfile(){
+        if(this.showProfile){
+          this.setState({showProfile:false});
+        }
+        else{
+          this.setState({showProfile:true});        
+        }
       }
 
       
@@ -75,7 +89,8 @@ class App extends React.Component{
       let about=<Products/>;
       let lader=<GradeRader/>;
       let list=<List/>;
-
+      let add=<Add/>;
+      let del=<Delete/>;
       return (
         
       <div className="main">
@@ -88,20 +103,24 @@ class App extends React.Component{
 
           
           
-        <div>{list}</div>
+          
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
+          <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{del}</div>
+          <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
+          <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{lader}</div>
           
-          <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{lader}</div>
-          {about}
+
+          
         </div>
-        <BrowserRouter>
-            <div className="links">            
-            <a className="btn github links" href="https://github.com/fish0504"><FontAwesomeIcon icon={['fab','github']}/></a>
-            <a className="btn twitter links" href="https://twitter.com/fish0504_"><FontAwesomeIcon icon={['fab','twitter']}/></a>
-            <a className="btn AtCoder links" href="https://atcoder.jp/users/fish0504"><FontAwesomeIcon icon={['fas','chess-knight']}/></a>
-            </div>
-        </BrowserRouter>
+        <button onClick={()=>{this.switchProfile()}} className="btn owner"
+        style={{display:this.state.showProfile ? 'none' : '' }}>show</button>
+
+        <div style={{display:this.state.showProfile ? '' : 'none' }}>{about}</div>
+
+        <button onClick={()=>{this.switchProfile()}} className="btn owner" 
+        style={{display:this.state.showProfile ? '' : 'none' }}>hide</button>
       </div>
       
       

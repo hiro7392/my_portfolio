@@ -4,13 +4,11 @@ const Profile=()=>{
 
     return (
       <div className="Profile">
-      <h1 className="home_name">千里の道も一歩から</h1>
+      <h1 className="home_name">たけのこの如く伸びていく</h1>
       <h2 className="my_name">Takenoko</h2>
       
+    
       
-
-      <h3></h3>
-      <p>週間記録アプリ</p>
       
       
     </div>

@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import "firebase/storage";
+import Add from "./Add";
 
 class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+        data: [],
+        displayAdd:false
     };
     this.getFireData();
   }
@@ -25,6 +27,9 @@ class List extends Component {
         });
       });
   }
+  showAdd(){
+    this.setState({displayAdd:true});
+  }
 
   // データ表示の生成
   getTableData() {
@@ -32,16 +37,17 @@ class List extends Component {
     if (this.state.data == null || this.state.data.length == 0) {
       return [
         <tr key="0">
-          <th>NO DATA</th>
+            <th>NO DATA</th>
         </tr>
       ];
     }
     for (let i in this.state.data) {
       result.push(
+        
         <tr key={i}>
-          <th>{this.state.data[i].ID}</th>
-          <td>{this.state.data[i].name}</td>
-          <td>{this.state.data[i].message}</td>
+          <td className="btn routine">{this.state.data[i].name}</td>
+          <td>{this.state.data[i].count}</td>
+          <td>{this.state.data[i].streak}</td>
         </tr>
       );
     }
@@ -49,15 +55,28 @@ class List extends Component {
   }
 
   render() {
+    let create=<Add/>;
     if (this.state.data.length == 0) {
-      this.getFireData();
+        this.getFireData();
     }
     return (
-      <table>
+        <div>
+        <table class="table list">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">count</th>
+                <th scope="col">streak</th>
+            </tr>
+        </thead>
         <tbody>{this.getTableData()}</tbody>
-      </table>
+        
+        </table>
+        <button onClick={()=>{this.showAdd()}} className="btn products">Create</button>
+        <div style={{display:this.state.displayAdd ? '' : 'none' }}>{create}</div>
+        </div>
     );
-  }
+   }
 }
 
 export default List;

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import "firebase/storage";
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import Button from 'react-bootstrap/Button';
+
 
 class Add extends Component {
   constructor(props) {
@@ -60,7 +63,8 @@ class Add extends Component {
     let ref = db.ref("/sample/" + id);
     ref.set({
       ID: id,
-      message: this.state.msg_str,
+      count:0,
+      streak:0,
       name: this.state.name_str
     });
   }
@@ -73,17 +77,17 @@ class Add extends Component {
       <div>
         <input
           type="text"
-          placeholder="your name."
+          placeholder="name."
           onChange={this.doChangeName}
           value={this.state.name_str}
         />
-        <input
+        {/* <input
           type="text"
           placeholder="type message"
           onChange={this.doChangeMsg}
           value={this.state.msg_str}
-        />
-        <button onClick={this.doAction}>Add</button>
+        /> */}
+        <button className="sub" onClick={this.doAction}>Add</button>
       </div>
     );
   }
