@@ -12,8 +12,10 @@ import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
 import List from "./List";
+
+
 //import InputForm from './Firebase';
-import GradeRader from './Rader';
+import GradeRader from './Rader'; //レーダーチャート用
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -72,7 +74,7 @@ class App extends React.Component{
       let skill=<Skills/>;
       let about=<Products/>;
       let lader=<GradeRader/>;
-      let list=<list/>;
+      let list=<List/>;
 
       return (
         
