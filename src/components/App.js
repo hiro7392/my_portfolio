@@ -11,6 +11,7 @@ import Contentbox from './Contentbox';
 import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
+import List from "./List";
 //import InputForm from './Firebase';
 import GradeRader from './Rader';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
@@ -19,21 +20,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { fas } from "@fortawesome/free-solid-svg-icons"; 
 import { library } from '@fortawesome/fontawesome-svg-core';
-
-
+//import firebase from "firebase/app";
+import firebase from "firebase";
 library.add(fab,fas);
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCVS5WF9IpxzedQ8bQcnxOTq9IRKJ3PhZE",
+  authDomain: "routine-react-app.firebaseapp.com",
+  databaseURL: "https://routine-react-app-default-rtdb.firebaseio.com",
+  projectId: "routine-react-app",
+  storageBucket: "routine-react-app.appspot.com",
+  messagingSenderId: "232980496591",
+  appId: "1:232980496591:web:b719b34a9c15f34a3d37ba"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
 
 
 class App extends React.Component{
     constructor(props) {
       super(props);
-      
       // stateを定義してください
       this.state={openNumber:0};
-
     }
+      
+      
+      
       clickProfile(){
         this.setState({openNumber:0});
+        //this.getUserId("sakana")
       }
       clickSkills(){
         this.setState({openNumber:1});
@@ -54,7 +72,7 @@ class App extends React.Component{
       let skill=<Skills/>;
       let about=<Products/>;
       let lader=<GradeRader/>;
-      
+      let list=<list/>;
 
       return (
         
@@ -68,7 +86,7 @@ class App extends React.Component{
 
           
           
-          
+        <div>{list}</div>
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
           
@@ -83,6 +101,7 @@ class App extends React.Component{
             </div>
         </BrowserRouter>
       </div>
+      
       
     
   
