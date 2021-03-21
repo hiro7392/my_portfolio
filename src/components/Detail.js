@@ -73,11 +73,11 @@ class Detail extends Component {
         
     return result;
   }
-  getDetail(){
+  getDetail(num){
       return(
         <div>
-            <div>{this.getName(1)}</div>
-            <h2>skill point</h2>
+            <div>{this.getName(num)}</div>
+            <h1>skill point</h1>
 
         <table class="table list">
         <thead class="thead-light">
@@ -91,7 +91,7 @@ class Detail extends Component {
         </tr>
         </thead>
     
-        <tbody>{this.displayDetail(1)}</tbody>
+        <tbody>{this.displayDetail(num)}</tbody>
     
         </table>
     </div>
@@ -106,7 +106,9 @@ class Detail extends Component {
     //選択したものだけを表示したい
     let item=[];
     if(this.state.show){
-        item.push(this.getDetail());
+        for (let i in this.state.data){
+        item.push(this.getDetail(i));
+        }
     }
 
     return (
