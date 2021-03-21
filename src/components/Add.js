@@ -65,7 +65,14 @@ class Add extends Component {
       ID: id,
       count:0,
       streak:0,
-      name: this.state.name_str
+      name: this.state.name_str,
+      skiilPoint:{
+        experiment:0,
+        knowledge:0,
+        HP:0,
+        MP:0,
+        skill:1
+      }
     });
   }
 
@@ -81,12 +88,7 @@ class Add extends Component {
           onChange={this.doChangeName}
           value={this.state.name_str}
         />
-        {/* <input
-          type="text"
-          placeholder="type message"
-          onChange={this.doChangeMsg}
-          value={this.state.msg_str}
-        /> */}
+        
         <button className="sub" onClick={this.doAction}>Add</button>
       </div>
     );

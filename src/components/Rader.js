@@ -1,20 +1,43 @@
     //表示させたいデータ群
      //表示させたいデータ群
 import {PolarGrid,Tooltip,RadarChart,PolarAngleAxis,Radar} from 'recharts'
-import React from 'react';
-import firebase from "firebase/app";
-import 'firebase/database'
-const GradeRader=()=>{
+import React,{Component} from 'react';
+import firebase from "firebase";
+import "firebase/storage";
+class GradeRader extends Component{
+//const GradeRader=()=>{
   
-      
-      
+  constructor(props) {
+    super(props);
+    this.state = {
+        player:[],
+    };
+    this.getFireData();
     
-    const dataRadar = [
-        { rank: '知識', value: 120 },
-        { rank: '経験', value: 85 },
-        { rank: '集中力', value: 65 },
-        { rank: 'HP', value: 35 },
-        { rank: 'MP', value: 35 },
+  }
+
+  // Firebaseからのデータ取得
+  getFireData(){
+    let db = firebase.database();
+    
+    let ref2=db.ref("player/");
+    let self = this;
+    ref2
+      .orderByKey()
+      .on("value", snapshot => {
+        self.setState({
+          player: snapshot.val()
+        });
+      });
+    }
+      
+  render(){
+      var dataRadar = [
+        { rank: 'knowledge', value: this.state.player.knowledge },
+        { rank: 'experiment', value: this.state.player.experiment },
+        { rank: 'skill', value: this.state.player.skill },
+        { rank: 'HP', value: this.state.player.HP },
+        { rank: 'MP', value: this.state.player.MP }
         ];
     
     return(
@@ -40,8 +63,10 @@ const GradeRader=()=>{
       />
       <Tooltip /> //hoverすると各パラメーターの値が表示される
       </RadarChart>
-
+      
+      
     );
+  }
 }
 
 export default GradeRader;

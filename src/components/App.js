@@ -14,6 +14,7 @@ import Products from './Products';
 import List from "./List";
 import Add from "./Add";
 import Delete from "./Delete"
+import Detail from "./Detail"
 
 //import InputForm from './Firebase';
 import GradeRader from './Rader'; //レーダーチャート用
@@ -91,6 +92,7 @@ class App extends React.Component{
       let list=<List/>;
       let add=<Add/>;
       let del=<Delete/>;
+      let detail=<Detail/>;
       return (
         
       <div className="main">
@@ -107,6 +109,9 @@ class App extends React.Component{
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{lader}</div>
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{detail}</div>
+
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{del}</div>
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
           <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{lader}</div>

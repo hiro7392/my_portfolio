@@ -108,6 +108,11 @@ input{
 }
 .routine{
   width:90%;
+  text-align: center;
+  
+  font-family: sans-serif;
+  font-size: 25px;
+
 }
 
 .btn:hover{
@@ -152,6 +157,18 @@ input{
   color:white;
   background-color:rgb(228, 18, 200);
 }
+
+.skillpoint{
+  text-align: center;
+}
+
+.cnt{
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
 .github{
   background-color: rgba(150,10,150,1);
   border-radius: 10px;
