@@ -120,6 +120,7 @@ input{
 }
 .routine:hover{
   background-color:violet;
+  background-color:black;
 }
 
 .btn:active{
@@ -151,6 +152,10 @@ input{
 }
 .products{
   background-color:rgba(250,100,10,1);
+}
+.sub:hover{
+  background-color: aqua;
+
 }
 
 .owner{

@@ -10,13 +10,22 @@ class Add extends Component {
     super(props);
     this.state = {
       name_str: "",
-      msg_str: "",
+      HP_value:0,
+      MP_value:0,
+      experiment_value:0,
+      skill_value:0,
+      knowledge_value:0,
       lastID: -1,
       data: []
     };
     this.getLastID();
     this.doChangeName = this.doChangeName.bind(this);
-    this.doChangeMsg = this.doChangeMsg.bind(this);
+    this.doChangeHP = this.doChangeHP.bind(this);
+    this.doChangeMP = this.doChangeMP.bind(this);
+    this.doChangeKnowledge = this.doChangeKnowledge.bind(this);
+    this.doChangeExperiment = this.doChangeExperiment.bind(this);
+    this.doChangeSkill = this.doChangeSkill.bind(this);
+
     this.doAction = this.doAction.bind(this);
   }
 
@@ -25,12 +34,33 @@ class Add extends Component {
       name_str: e.target.value
     });
   }
-
-  doChangeMsg(e) {
+  doChangeHP(e) {
     this.setState({
-      msg_str: e.target.value
+      HP_value: e.target.value
     });
   }
+  doChangeMP(e) {
+    this.setState({
+      MP_value: e.target.value
+    });
+  }
+  doChangeKnowledge(e) {
+    this.setState({
+      knowledge_value: e.target.value
+    });
+  }
+  doChangeExperiment(e) {
+    this.setState({
+      experiment_value: e.target.value
+    });
+  }
+  doChangeSkill(e) {
+    this.setState({
+      skill_value: e.target.value
+    });
+  }
+
+  
 
   doAction(e) {
     this.addFireData();
@@ -66,7 +96,7 @@ class Add extends Component {
       count:0,
       streak:0,
       name: this.state.name_str,
-      skiilPoint:{
+      skillPoint:{
         experiment:0,
         knowledge:0,
         HP:0,
@@ -81,16 +111,75 @@ class Add extends Component {
       this.getLastID();
     }
     return (
-      <div>
-        <input
-          type="text"
-          placeholder="name."
-          onChange={this.doChangeName}
-          value={this.state.name_str}
+      
+       <div>
+         <div>
+          <h4>追加する習慣名</h4>
+       <input
+                  type="text"
+                  placeholder="name."
+                  onChange={this.doChangeName}
+                  value={this.state.name_str}
         />
-        
+           <table class="table list">
+             <thead class="thead-light">
+                 <tr>
+                     
+                     <th scope="col">HP</th>
+                     <th scope="col">MP</th>
+                     <th scope="col">Knowledge</th>
+                     <th scope="col">Experiment</th>
+                     <th scope="col">Skill</th>
+                 </tr>
+             </thead>
+             <tbody>
+               
+               <td className="cnt">
+                  <input
+                  type="value"
+                  placeholder="HP"
+                  onChange={this.doChangeHP}
+                  value={this.state.HP_value}
+                  />
+               </td>
+               <td className="cnt">
+                  <input
+                  type="value"
+                  placeholder="MP"
+                  onChange={this.doChangeMP}
+                  value={this.state.MP_value}
+                  />
+               </td>
+               <td className="cnt">
+               <input
+                  type="value"
+                  placeholder="knowledge"
+                  onChange={this.doChangeKnowledge}
+                  value={this.state.knowledge_value}
+                  />
+               </td>
+               <td className="cnt">
+                  <input
+                  type="value"
+                  placeholder="experimence"
+                  onChange={this.doChangeExperiment}
+                  value={this.state.experiment_value}
+                  />
+               </td>
+               <td className="cnt">
+                <input
+                  type="text"
+                  placeholder="skill"
+                  onChange={this.doChangeSkill}
+                  value={this.state.skill_value}
+                  />
+               </td>
+             </tbody>
+           </table>
+          </div>
+    
         <button className="sub" onClick={this.doAction}>Add</button>
-      </div>
+        </div>
     );
   }
 }
