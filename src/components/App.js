@@ -8,7 +8,7 @@ import Contentbox from './Contentbox';
 import Profile from './Profile';
 import Skills from './Skills';
 import Products from './Products';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

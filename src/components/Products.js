@@ -12,7 +12,9 @@ const Products=()=>{
 
       <h1 className="about_title">About me</h1>
       <div classNmae="profile_content">
-          <p>広島大学 工学部二類　4年</p>
+          <p>広島大学 先進理工系科学研究科</p>
+          <p>博士課程前期 1年</p>
+
           <p>大学3年までの間は自分の興味のある分野を<br/>独学で勉強することに力を入れました。</p>
           <p>4年生からは研究室に所属し卒業研究をする傍ら<br/>バイトとして画像処理に関する研究をしています</p>
 
