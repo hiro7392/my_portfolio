@@ -6,7 +6,7 @@ class Delete extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id_str: props
+      id_str: 1
     };
     this.doChange = this.doChange.bind(this);
     this.doAction = this.doAction.bind(this);
@@ -21,7 +21,9 @@ class Delete extends Component {
   doAction(e) {
     this.deleteFireData();
   }
-  
+  setNum(i){
+    this.setState({id_str:i})
+  }
 
   deleteFireData() {
     let id = this.state.id_str;
@@ -33,7 +35,6 @@ class Delete extends Component {
   render() {
     return (
       <div>
-        
         <button onClick={this.doAction}>Delete</button>
       </div>
     );

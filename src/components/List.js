@@ -82,15 +82,16 @@ class List extends Component {
       ];
     }
     for (let i in this.state.data) {
-      let del= <Delete/>(i)
-
+      
+      //let del=<Delete/>;
+      //del.setNum(this.state.data[i].id);
       result.push(
         
         <tr key={i}>
           <td className="btn routine" onClick={()=>{this.increFireData(i)}}>{this.state.data[i].name}</td>
           <td className="cnt">{this.state.data[i].count}</td>
           <td className="cnt">{this.state.data[i].streak}</td>
-          <td className="cnt">{del}</td>
+          
         </tr>
       );
     }
@@ -102,10 +103,9 @@ class List extends Component {
     
     
     let create=<Add/>;
-    
-    if (this.state.data.length == 0) {
-        this.getFireData();
-    }
+    // if (this.state.data.length == 0) {
+    //     this.getFireData();
+    // }
     return (
         <div>
         <table class="table list">

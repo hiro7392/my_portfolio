@@ -100,9 +100,9 @@ class Detail extends Component {
 
   　render() {
     
-    if (this.state.data.length == 0) {
-        this.getFireData();
-    }
+    // if (this.state.data.length == 0) {
+    //     this.getFireData();
+    // }
     //選択したものだけを表示したい
     let item=[];
     if(this.state.show){

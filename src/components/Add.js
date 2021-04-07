@@ -86,6 +86,7 @@ class Add extends Component {
 
   addFireData() {
     if (this.state.lastID == -1) {
+
       return;
     }
     let id = this.state.lastID * 1 + 1;
