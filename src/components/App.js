@@ -95,6 +95,7 @@ class App extends React.Component{
       let del=<Delete/>;
       let detail=<Detail/>;
       let ability=<Ability/>;
+      
       return (
         
       <div className="main">
