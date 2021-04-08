@@ -15,7 +15,7 @@ class Add extends Component {
       experiment_value:0,
       skill_value:0,
       knowledge_value:0,
-      lastID: -1,
+      lastID: 0,
       data: []
     };
     this.getLastID();
@@ -113,10 +113,10 @@ class Add extends Component {
     }
     return (
       
-       <div>
-         <div>
+        <div>
+        <div>
           <h4>追加する習慣名</h4>
-       <input
+        <input
                   type="text"
                   placeholder="name."
                   onChange={this.doChangeName}

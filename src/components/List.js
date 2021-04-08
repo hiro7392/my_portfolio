@@ -103,9 +103,9 @@ class List extends Component {
     
     
     let create=<Add/>;
-    // if (this.state.data.length == 0) {
-    //     this.getFireData();
-    // }
+    if (this.state.data.length == 0) {
+        this.getFireData();
+    }
     return (
         <div>
         <table class="table list">
