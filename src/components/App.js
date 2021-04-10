@@ -4,7 +4,7 @@ import React from 'react';
 
 //import { withRouter } from 'react-router';
 //import { Link } from "react-router-dom";
-import Contentbox from './Contentbox';
+//import Contentbox from './Contentbox';
 //import {View } from 'react-native';
 //import { Ionicons, FontAwesome } from "@expo/vector-icons";
 //import Icon from 'react-native-vector-icons/FontAwesome';
@@ -20,7 +20,7 @@ import Ability from "./Ability"
 //import InputForm from './Firebase';
 import GradeRader from './Rader'; //レーダーチャート用
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { fas } from "@fortawesome/free-solid-svg-icons"; 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -111,7 +111,7 @@ class App extends React.Component{
           
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
-          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
+          
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{lader}</div>
           <div style={{display:this.state.openNumber !==1 ? 'none' : '' }}>{ability}</div>
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{detail}</div>
@@ -139,6 +139,7 @@ class App extends React.Component{
   }
 
 }
+// <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
 //
 //<Link to="https://twitter.com/fish0504_"><button className="btn twitter links">Twitter</button></Link>
 export default App;
