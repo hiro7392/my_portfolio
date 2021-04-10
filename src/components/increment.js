@@ -41,7 +41,7 @@ class List extends Component {
         </tr>
       ];
     }
-    let ref = db.ref("sample/");
+    let ref = db.ref("routines/");
     let nowData=ref.equalTo({"id":num});
     result.push(<div>
         <h1>nowData.name</h1>);

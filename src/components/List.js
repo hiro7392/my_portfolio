@@ -21,7 +21,7 @@ class List extends Component {
   // Firebaseからのデータ取得
   getFireData() {
     let db = firebase.database();
-    let ref = db.ref("sample/");
+    let ref = db.ref("routines/");
     let ref2=db.ref("player/");
     let self = this;
     ref
@@ -51,7 +51,7 @@ class List extends Component {
     //id=index
     let db = firebase.database();
     //let id=this.state.data[index].id;
-    let ref = db.ref("sample/"+id);
+    let ref = db.ref(id);
     if (this.state.lastID == -1) {
       return;
     }
@@ -103,7 +103,7 @@ class List extends Component {
     
     
     let create=<Add/>;
-    if (this.state.data.length == 0) {
+    if (this.state.data.length == -1) {
         this.getFireData();
     }
     return (

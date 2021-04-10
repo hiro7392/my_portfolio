@@ -116,6 +116,7 @@ class App extends React.Component{
           <div style={{display:this.state.openNumber !==1 ? 'none' : '' }}>{ability}</div>
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{detail}</div>
 
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{del}</div>
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
           <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{lader}</div>
