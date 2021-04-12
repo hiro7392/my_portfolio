@@ -15,7 +15,7 @@ class List extends Component {
         
     };
     this.getFireData();
-  
+    
   }
 
   // Firebaseからのデータ取得
@@ -81,9 +81,11 @@ class List extends Component {
         </tr>
       ];
     }
+    
     for (let i in this.state.data) {
+      let del=<Delete/>;
+      let ID=this.state.data[i].id;
       
-      //let del=<Delete/>;
       //del.setNum(this.state.data[i].id);
       result.push(
         
@@ -91,7 +93,7 @@ class List extends Component {
           <td className="btn routine" onClick={()=>{this.increFireData(i)}}>{this.state.data[i].name}</td>
           <td className="cnt">{this.state.data[i].count}</td>
           <td className="cnt">{this.state.data[i].streak}</td>
-          
+          <td className="btn routine">{del}</td>
         </tr>
       );
     }
@@ -99,7 +101,6 @@ class List extends Component {
   }
 
   render() {
-    
     
     
     let create=<Add/>;

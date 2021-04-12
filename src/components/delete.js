@@ -6,7 +6,7 @@ class Delete extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id_str: 1
+      id_str: "1"
     };
     this.doChange = this.doChange.bind(this);
     this.doAction = this.doAction.bind(this);
@@ -28,7 +28,7 @@ class Delete extends Component {
   deleteFireData() {
     let id = this.state.id_str;
     let db = firebase.database();
-    let ref = db.ref("sample/" + id);
+    let ref = db.ref("routines/" + id);
     ref.remove();
   }
 
