@@ -18,7 +18,7 @@ class Delete extends Component {
     });
   }
 
-  doAction(e) {
+  doAction() {
     this.deleteFireData();
   }
   setNum(i){
@@ -35,7 +35,7 @@ class Delete extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.doAction}>Delete</button>
+        <div onClick={this.doAction()}>Delete</div>
       </div>
     );
   }

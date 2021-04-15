@@ -14,8 +14,8 @@ const Products=()=>{
 
       <h1 className="about_title">作成者</h1>
       <div classNmae="profile_content">
-          <p>広島大学 工学部二類　4年</p>
-          <p>川原大宙</p>
+          <p>広島大学大学院<br></br>先進理工系科学研究科</p>
+          <p>修士1年　川原大宙</p>
           <div className="English">
         <h3>Hiroshima University</h3>
         <p>Electrical Engineering and System Control Course</p>

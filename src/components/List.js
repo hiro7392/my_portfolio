@@ -93,7 +93,7 @@ class List extends Component {
           <td className="btn routine" onClick={()=>{this.increFireData(i)}}>{this.state.data[i].name}</td>
           <td className="cnt">{this.state.data[i].count}</td>
           <td className="cnt">{this.state.data[i].streak}</td>
-          <td className="btn routine">{del}</td>
+          <td className="btn delete">{del}</td>
         </tr>
       );
     }
