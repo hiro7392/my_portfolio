@@ -16,7 +16,7 @@ import Add from "./Add";
 import Delete from "./Delete"
 import Detail from "./Detail"
 import Ability from "./Ability"
-
+//import App2 from "./auth/App2"
 //import InputForm from './Firebase';
 import GradeRader from './Rader'; //レーダーチャート用
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -95,7 +95,7 @@ class App extends React.Component{
       let del=<Delete/>;
       let detail=<Detail/>;
       let ability=<Ability/>;
-      
+      //let app2=<App2/>;
       return (
         
       <div className="main">

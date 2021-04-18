@@ -17,7 +17,7 @@ class Detail extends Component {
   // Firebaseからのデータ取得
   getFireData() {
     let db = firebase.database();
-    let ref = db.ref("sample/");
+    let ref = db.ref("routines/");
     let self = this;
     ref
       .orderByKey()
