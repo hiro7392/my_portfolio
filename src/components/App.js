@@ -9,13 +9,12 @@ import React from 'react';
 //import { Ionicons, FontAwesome } from "@expo/vector-icons";
 //import Icon from 'react-native-vector-icons/FontAwesome';
 import Profile from './Profile';
-import Skills from './Skills';
 import Products from './Products';
 import List from "./List";
 import Add from "./Add";
-import Delete from "./Delete"
 import Detail from "./Detail"
 import Ability from "./Ability"
+//import Dropd from "./part/Dropd"
 //import App2 from "./auth/App2"
 //import InputForm from './Firebase';
 import GradeRader from './Rader'; //レーダーチャート用
@@ -87,12 +86,10 @@ class App extends React.Component{
     render()
     {
       let home=<Profile/>;
-      let skill=<Skills/>;
       let about=<Products/>;
       let lader=<GradeRader/>;
       let list=<List/>;
       let add=<Add/>;
-      let del=<Delete/>;
       let detail=<Detail/>;
       let ability=<Ability/>;
       //let app2=<App2/>;
@@ -114,10 +111,11 @@ class App extends React.Component{
           
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{lader}</div>
           <div style={{display:this.state.openNumber !==1 ? 'none' : '' }}>{ability}</div>
-          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{detail}</div>
 
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
-          <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{del}</div>
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{detail}</div>
+
+          
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
           <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{lader}</div>
           <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{ability}</div>

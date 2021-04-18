@@ -98,11 +98,11 @@ class Add extends Component {
       streak:0,
       name: this.state.name_str,
       skillPoint:{
-        experiment:0,
-        knowledge:0,
-        HP:0,
-        MP:0,
-        skill:0
+        experiment:this.state.experiment_value,
+        knowledge:this.state.knowledge_value,
+        HP:this.state.HP_value,
+        MP:this.state.MP_value,
+        skill:this.state.skill_value
       }
     });
   }
@@ -136,7 +136,7 @@ class Add extends Component {
              <tbody>
                
                <td className="cnt">
-                  <input
+                  <input className="in"
                   type="value"
                   placeholder="HP"
                   onChange={this.doChangeHP}
@@ -144,7 +144,7 @@ class Add extends Component {
                   />
                </td>
                <td className="cnt">
-                  <input
+                  <input className="in"
                   type="value"
                   placeholder="MP"
                   onChange={this.doChangeMP}
@@ -152,7 +152,7 @@ class Add extends Component {
                   />
                </td>
                <td className="cnt">
-               <input
+               <input className="in"
                   type="value"
                   placeholder="knowledge"
                   onChange={this.doChangeKnowledge}
@@ -160,7 +160,7 @@ class Add extends Component {
                   />
                </td>
                <td className="cnt">
-                  <input
+                  <input className="in"
                   type="value"
                   placeholder="experimence"
                   onChange={this.doChangeExperiment}
@@ -168,7 +168,7 @@ class Add extends Component {
                   />
                </td>
                <td className="cnt">
-                <input
+                <input className="in"
                   type="text"
                   placeholder="skill"
                   onChange={this.doChangeSkill}
@@ -179,7 +179,7 @@ class Add extends Component {
            </table>
           </div>
     
-        <button className="sub" onClick={this.doAction}>Add</button>
+        <button className="btn sub" onClick={this.doAction}>Add</button>
         </div>
     );
   }

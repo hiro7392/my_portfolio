@@ -69,8 +69,25 @@ td{
 input{
   height:30px;
 }
+
 .sub{
-  height:30px;
+  background-color:rgba(250,100,10,1);
+  height:50px;
+}
+.in{
+  background-color: rgb(38, 219, 22);
+}
+.skillPoint{
+  font-family:sans-serif;
+  color:rgba(250,100,10,1);
+}
+.status{
+  font-family:sans-serif;
+  color:rgb(107, 133, 25);
+}
+.routine_all{
+  font-family:sans-serif;
+  color:rgb(229, 243, 31);
 }
 /*
 .btn{
@@ -162,8 +179,8 @@ input{
 }
 .sub:hover{
   background-color: aqua;
-
 }
+
 
 .owner{
   color:white;

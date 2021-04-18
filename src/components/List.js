@@ -12,7 +12,7 @@ class List extends Component {
         player:[],
         displayAdd:false,
         displayDetail:0,
-        
+        displayCreate:true,
     };
     this.getFireData();
     
@@ -42,6 +42,7 @@ class List extends Component {
   }
   showAdd(){
     this.setState({displayAdd:true});
+    this.setState({displayCreate:false});
   }
   changeDetail(num){
     this.setState({displayDetail:num});
@@ -68,6 +69,7 @@ class List extends Component {
 
   }
   deleteFireData(i) {
+    alert('本当に消去しますか?')
     var id=this.state.data[i].id;
     let db = firebase.database();
     let ref = db.ref("routines/" + id);
@@ -97,8 +99,6 @@ class List extends Component {
         <tr key={i}>
           <td className="btn routine" onClick={()=>{this.increFireData(i)}}>{this.state.data[i].name}</td>
           <td className="cnt">{this.state.data[i].count}</td>
-          <td className="cnt">{this.state.data[i].streak}</td>
-          <td className="cnt">{this.state.data[i].id}</td>
           <td className="btn delete" onClick={()=>{this.deleteFireData(i)}}>消去</td>
         </tr>
       );
@@ -115,20 +115,20 @@ class List extends Component {
     }
     return (
         <div>
+        <h1 className="routine_all">続けたい習慣</h1>
         <table class="table list">
         <thead class="thead-light">
             <tr>
                 <th scope="col">name</th>
                 <th scope="col">count</th>
-                <th scope="col">streak</th>
-                <th scope="col">id</th>
                 <th scope="col">delete</th>
             </tr>
         </thead>
         <tbody>{this.getTableData()}</tbody>
         
         </table>
-        <button onClick={()=>{this.showAdd()}} className="btn products">Create</button>
+        <button onClick={()=>{this.showAdd()}} className="btn products"
+        style={{display:this.state.displayCreate ? '' : 'none' }} >Create</button>
         <div style={{display:this.state.displayAdd ? '' : 'none' }}>{create}</div>
         
         
