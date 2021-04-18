@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import firebase from "firebase";
 import "firebase/storage";
 import Add from "./Add";
-import Delete from "./Delete"
+
 
 class List extends Component {
   constructor(props) {
@@ -46,27 +46,32 @@ class List extends Component {
   changeDetail(num){
     this.setState({displayDetail:num});
   }
-
-  increFireData(id) {
+  //iは配列のインデックス
+  increFireData(i) {
     //id=index
     let db = firebase.database();
-    //let id=this.state.data[index].id;
-    let ref = db.ref(id);
+    
+    var ID=this.state.data[i].id;    //習慣[i]のID
+    let ref = db.ref("routines/"+ID);
     if (this.state.lastID == -1) {
       return;
     }
-    var cnt=this.state.data[id].count;
+    var cnt=this.state.data[i].count;
     cnt=cnt+1
     ref.update({"count":cnt});
     let p=db.ref("player/");
-    p.update({"HP":(this.state.player.HP+this.state.data[id].skillPoint.HP)});
-    p.update({"MP":this.state.player.MP+this.state.data[id].skillPoint.MP});
-    p.update({"skill":this.state.player.skill+this.state.data[id].skillPoint.skill});
-    p.update({"knowledge":this.state.player.knowledge+this.state.data[id].skillPoint.knowledge});
-    p.update({"experiment":this.state.player.experiment+this.state.data[id].skillPoint.experiment});
+    p.update({"HP":(this.state.player.HP+this.state.data[i].skillPoint.HP)});
+    p.update({"MP":this.state.player.MP+this.state.data[i].skillPoint.MP});
+    p.update({"skill":this.state.player.skill+this.state.data[i].skillPoint.skill});
+    p.update({"knowledge":this.state.player.knowledge+this.state.data[i].skillPoint.knowledge});
+    p.update({"experiment":this.state.player.experiment+this.state.data[i].skillPoint.experiment});
 
-
-
+  }
+  deleteFireData(i) {
+    var id=this.state.data[i].id;
+    let db = firebase.database();
+    let ref = db.ref("routines/" + id);
+    ref.remove();
   }
 
 
@@ -83,7 +88,7 @@ class List extends Component {
     }
     
     for (let i in this.state.data) {
-      let del=<Delete/>;
+      
       let ID=this.state.data[i].id;
       
       //del.setNum(this.state.data[i].id);
@@ -93,7 +98,8 @@ class List extends Component {
           <td className="btn routine" onClick={()=>{this.increFireData(i)}}>{this.state.data[i].name}</td>
           <td className="cnt">{this.state.data[i].count}</td>
           <td className="cnt">{this.state.data[i].streak}</td>
-          <td className="btn delete">{del}</td>
+          <td className="cnt">{this.state.data[i].id}</td>
+          <td className="btn delete" onClick={()=>{this.deleteFireData(i)}}>消去</td>
         </tr>
       );
     }
@@ -115,6 +121,7 @@ class List extends Component {
                 <th scope="col">name</th>
                 <th scope="col">count</th>
                 <th scope="col">streak</th>
+                <th scope="col">id</th>
                 <th scope="col">delete</th>
             </tr>
         </thead>

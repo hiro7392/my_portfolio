@@ -68,7 +68,7 @@ class Add extends Component {
 
   getLastID() {
     let db = firebase.database();
-    let ref = db.ref("sample/");
+    let ref = db.ref("routines/");
     let self = this;
     ref
       .orderByKey()
@@ -91,9 +91,9 @@ class Add extends Component {
     }
     let id = this.state.lastID * 1 + 1;
     let db = firebase.database();
-    let ref = db.ref("/sample/" + id);
+    let ref = db.ref("/routines/" + id);
     ref.set({
-      ID: id,
+      id: id,
       count:0,
       streak:0,
       name: this.state.name_str,
@@ -102,7 +102,7 @@ class Add extends Component {
         knowledge:0,
         HP:0,
         MP:0,
-        skill:1
+        skill:0
       }
     });
   }
