@@ -128,7 +128,7 @@ class List extends Component {
         
         </table>
         <button onClick={()=>{this.showAdd()}} className="btn products"
-        style={{display:this.state.displayCreate ? '' : 'none' }} >Create</button>
+        style={{display:this.state.displayCreate ? '' : 'none' }} >新規</button>
         <div style={{display:this.state.displayAdd ? '' : 'none' }}>{create}</div>
         
         

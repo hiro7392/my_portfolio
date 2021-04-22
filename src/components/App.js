@@ -64,7 +64,7 @@ class App extends React.Component{
         this.setState({openNumber:1});
         this.setState({showProfile:false});
       }
-      clickProducts(){
+      clickChart(){
         this.setState({openNumber:2});
         this.setState({showProfile:false});
       }
@@ -99,7 +99,7 @@ class App extends React.Component{
         <div className="headlinks">
           <button onClick={()=>{this.clickProfile()}} className="btn about">Home</button>
           <button onClick={()=>{this.clickSkills()}}  className="btn Skills">List</button>
-          <button onClick={()=>{this.clickProducts()}} className="btn products">Chart</button>
+          <button onClick={()=>{this.clickChart()}} className="btn products">Chart</button>
         </div>
         <div className="contents">
 
@@ -109,12 +109,14 @@ class App extends React.Component{
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
           
-          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{lader}</div>
-          <div style={{display:this.state.openNumber !==1 ? 'none' : '' }}>{ability}</div>
+          <div style={{display:this.state.openNumber!==2 ? 'none' : '' }}>{lader}</div>
+          <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{ability}</div>
 
+          
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{list}</div>
           <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{detail}</div>
-
+          <div style={{display:this.state.openNumber!==1 ? 'none' : '' }}>{lader}</div>
+          <div style={{display:this.state.openNumber !==1 ? 'none' : '' }}>{ability}</div>
           
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
           <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{lader}</div>

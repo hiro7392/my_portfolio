@@ -33,11 +33,11 @@ class GradeRader extends Component{
       
   render(){
       var dataRadar = [
-        { rank: 'knowledge', value: this.state.player.knowledge },
-        { rank: 'experiment', value: this.state.player.experiment },
-        { rank: 'skill', value: this.state.player.skill },
-        { rank: 'HP', value: this.state.player.HP },
-        { rank: 'MP', value: this.state.player.MP }
+        { rank: '知識', value: this.state.player.knowledge },
+        { rank: '経験値', value: this.state.player.experiment },
+        { rank: '技術', value: this.state.player.skill },
+        { rank: '体力', value: this.state.player.HP },
+        { rank: 'メンタル', value: this.state.player.MP }
         ];
     
     return(

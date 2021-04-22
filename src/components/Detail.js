@@ -62,7 +62,6 @@ class Detail extends Component {
     
         result.push(
             <tr key={num}>
-            <td className="btn routine">{this.state.data[num].name}</td>
             <td className="skillpoint">+{this.state.data[num].skillPoint.HP}</td>
             <td className="skillpoint">+{this.state.data[num].skillPoint.MP}</td>
             <td className="skillpoint">+{this.state.data[num].skillPoint.knowledge}</td>
@@ -82,12 +81,11 @@ class Detail extends Component {
         <table class="table list">
         <thead class="thead-light">
         <tr>
-            <th scope="col">name</th>
-            <th scope="col">HP</th>
-            <th scope="col">MP</th>
-            <th scope="col">knowledge</th>
-            <th scope="col">experiment</th>
-            <th scope="col">Skill</th>
+            <th scope="col">体力</th>
+            <th scope="col">メンタル</th>
+            <th scope="col">知識</th>
+            <th scope="col">経験値</th>
+            <th scope="col">技術力</th>
         </tr>
         </thead>
     
