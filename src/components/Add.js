@@ -100,11 +100,11 @@ class Add extends Component {
       streak:0,
       name: this.state.name_str,
       skillPoint:{
-        experiment:this.state.experiment_value,
-        knowledge:this.state.knowledge_value,
-        HP:this.state.HP_value,
-        MP:this.state.MP_value,
-        skill:this.state.skill_value
+        experiment:this.state.experiment_value*1,
+        knowledge:this.state.knowledge_value*1,
+        HP:this.state.HP_value*1,
+        MP:this.state.MP_value*1,
+        skill:this.state.skill_value*1
       }
     });
     this.setState({
@@ -151,7 +151,7 @@ class Add extends Component {
                <td className="cnt">
                   <input className="in"
                   type="value"
-                  placeholder=""
+                  placeholder="HP"
                   onChange={this.doChangeHP}
                   value={this.state.HP_value}
                   />
@@ -159,7 +159,7 @@ class Add extends Component {
                <td className="cnt">
                   <input className="in"
                   type="value"
-                  placeholder=""
+                  placeholder="mental"
                   onChange={this.doChangeMP}
                   value={this.state.MP_value}
                   />
@@ -167,7 +167,7 @@ class Add extends Component {
                <td className="cnt">
                <input className="in"
                   type="value"
-                  placeholder=""
+                  placeholder="knowledge"
                   onChange={this.doChangeKnowledge}
                   value={this.state.knowledge_value}
                   />
@@ -175,7 +175,7 @@ class Add extends Component {
                <td className="cnt">
                   <input className="in"
                   type="value"
-                  placeholder=""
+                  placeholder="exp"
                   onChange={this.doChangeExperiment}
                   value={this.state.experiment_value}
                   />
@@ -183,7 +183,7 @@ class Add extends Component {
                <td className="cnt">
                 <input className="in"
                   type="text"
-                  placeholder=""
+                  placeholder="skill"
                   onChange={this.doChangeSkill}
                   value={this.state.skill_value}
                   />
