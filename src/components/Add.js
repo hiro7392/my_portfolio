@@ -55,6 +55,7 @@ class Add extends Component {
     });
   }
   doChangeSkill(e) {
+    
     this.setState({
       skill_value: e.target.value
     });
@@ -92,6 +93,7 @@ class Add extends Component {
     let id = this.state.lastID * 1 + 1;
     let db = firebase.database();
     let ref = db.ref("/routines/" + id);
+    
     ref.set({
       id: id,
       count:0,
@@ -105,6 +107,17 @@ class Add extends Component {
         skill:this.state.skill_value
       }
     });
+    this.setState({
+      name_str: "",
+      HP_value:0,
+      MP_value:0,
+      experiment_value:0,
+      skill_value:0,
+      knowledge_value:0,
+      lastID: 0,
+      data: []
+    });
+    //this.getLastID();
   }
 
   render() {
@@ -115,7 +128,7 @@ class Add extends Component {
       
         <div>
         <div>
-          <h4>追加する習慣名</h4>
+          <h4 className="add_title">追加する習慣名</h4>
         <input
                   type="text"
                   placeholder="name."
@@ -138,7 +151,7 @@ class Add extends Component {
                <td className="cnt">
                   <input className="in"
                   type="value"
-                  placeholder="HP"
+                  placeholder=""
                   onChange={this.doChangeHP}
                   value={this.state.HP_value}
                   />
@@ -146,7 +159,7 @@ class Add extends Component {
                <td className="cnt">
                   <input className="in"
                   type="value"
-                  placeholder="MP"
+                  placeholder=""
                   onChange={this.doChangeMP}
                   value={this.state.MP_value}
                   />
@@ -154,7 +167,7 @@ class Add extends Component {
                <td className="cnt">
                <input className="in"
                   type="value"
-                  placeholder="knowledge"
+                  placeholder=""
                   onChange={this.doChangeKnowledge}
                   value={this.state.knowledge_value}
                   />
@@ -162,7 +175,7 @@ class Add extends Component {
                <td className="cnt">
                   <input className="in"
                   type="value"
-                  placeholder="experimence"
+                  placeholder=""
                   onChange={this.doChangeExperiment}
                   value={this.state.experiment_value}
                   />
@@ -170,7 +183,7 @@ class Add extends Component {
                <td className="cnt">
                 <input className="in"
                   type="text"
-                  placeholder="skill"
+                  placeholder=""
                   onChange={this.doChangeSkill}
                   value={this.state.skill_value}
                   />
@@ -179,7 +192,7 @@ class Add extends Component {
            </table>
           </div>
     
-        <button className="btn sub" onClick={this.doAction}>Add</button>
+        <button className="btn sub" onClick={this.doAction}>追加</button>
         </div>
     );
   }

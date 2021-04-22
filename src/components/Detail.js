@@ -76,9 +76,8 @@ class Detail extends Component {
       return(
         <div>
             <div>{this.getName(num)}</div>
-            <h1 className="skillPoint">skill point</h1>
-
-        <table class="table list">
+            <h1 className="skillPoint_title">skill point</h1>
+        <table class="table list skPoint">
         <thead class="thead-light">
         <tr>
             <th scope="col">体力</th>

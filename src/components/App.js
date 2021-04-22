@@ -108,7 +108,7 @@ class App extends React.Component{
           
           <div style={{display:this.state.openNumber!==0 ? 'none' : '' }}>{home}</div>
           
-          
+
           <div style={{display:this.state.openNumber!==2 ? 'none' : '' }}>{lader}</div>
           <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{ability}</div>
 
@@ -119,9 +119,7 @@ class App extends React.Component{
           <div style={{display:this.state.openNumber !==1 ? 'none' : '' }}>{ability}</div>
           
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
-          <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{lader}</div>
-          <div style={{display:this.state.openNumber !==2 ? 'none' : '' }}>{ability}</div>
-
+          
           
         </div>
         <button onClick={()=>{this.switchProfile()}} className="btn owner"

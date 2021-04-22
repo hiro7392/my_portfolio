@@ -77,9 +77,10 @@ input{
 .in{
   background-color: rgb(38, 219, 22);
 }
-.skillPoint{
+.skillPoint_title{
   font-family:sans-serif;
   color:rgba(250,100,10,1);
+  margin-bottom: -9%;
 }
 .status{
   font-family:sans-serif;
@@ -88,6 +89,10 @@ input{
 .routine_all{
   font-family:sans-serif;
   color:rgb(229, 243, 31);
+}
+.add_title{
+  font-family:sans-serif;
+  color:rgba(250,100,10,1);
 }
 /*
 .btn{
@@ -196,6 +201,9 @@ input{
   font-weight: bold;
   font-family: sans-serif;
   font-size: 20px;
+}
+.skPoint{
+  padding-top: 0%;
 }
 
 .github{
