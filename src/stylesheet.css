@@ -60,7 +60,7 @@ body {
 th{
   height:40px;
   background-color: rgb(1, 2, 2);
-  color:aquamarine;
+  color:rgb(248, 252, 252);
 
 }
 td{
@@ -212,17 +212,20 @@ input{
 .this_month{
   text-align: right;
 }
-
+.youbi{
+  color:white;
+}
 
 .calendar_days{
   font-family:sans-serif;
   text-align: center;
   width:100%;
   font-weight:80px;
-  padding:3% 0%;
+  padding:5% 1% 10% 1%;
   margin:5% 0%;
   opacity: 0.95;
-  background-color:rgb(6, 9, 26);
+  color:white;
+  background-color:rgb(6, 9, 26,0.5);
 }
 .day{
   color: black;
