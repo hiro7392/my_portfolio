@@ -189,24 +189,42 @@ input{
 .calendar{
   background-color:rgb(208, 241, 18);
 }
+.calendar:hover{
+  background-color:rgb(18, 115, 241);
+}
+.calendar_title{
+  font-family: sans-serif;
+}
 .calendar_content{
   width: 90%;
-  padding-top: 10%;
+  padding-top: 5%;
   text-align: center;
   margin: auto 0%;
 }
+.calendar_date{
+  background: rgba(20, 20, 52, 0);
+  color:white;
+}
+.before_month{
+  text-align: left;
+  margin-right:0%;
+}
+.this_month{
+  text-align: right;
+}
+
 
 .calendar_days{
   font-family:sans-serif;
   text-align: center;
-  width:90%;
+  width:100%;
   font-weight:80px;
-  padding-top: 5%;
-  padding-bottom: 10%;
+  padding:3% 0%;
+  margin:5% 0%;
   opacity: 0.95;
   background-color:rgb(6, 9, 26);
 }
-.date{
+.day{
   color: black;
   background-color: greenyellow;
   opacity: 0.9;

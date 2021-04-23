@@ -27,14 +27,12 @@ function Calendar() {
     return (
     <div className="calendar_content">
         {/* 追加ここから */}
-        <div className="calendar_content">
-        <button onClick={() => setTargetDate(current => subMonths(current, 1))}>前の月</button>
-        <button onClick={() => setTargetDate(new Date())}>今月</button>
-        <button onClick={() => setTargetDate(current => addMonths(current, 1))}>次の月</button>
-        </div>
+        <div>
+        
         {/* 追加ここまで */}
 
-        {format(targetDate, 'y年M月')}
+        <h1 className="calendar_title">{format(targetDate, 'y年M月')}</h1>
+        </div>
         <table className="calendar_days">
         <thead>
             <tr>
@@ -45,12 +43,15 @@ function Calendar() {
             {calendar.map((weekRow, rowNum) => (
             <tr key={rowNum}>
                 {weekRow.map(date => (
-                <td className="date" key={getDay(date)}>{getDate(date)}</td>
+                <td className="day" key={getDay(date)}>{getDate(date)}</td>
                 ))}
             </tr>
             ))}
         </tbody>
         </table>
+        <button className="calendar_date btn before_month" onClick={() => setTargetDate(current => subMonths(current, 1))}>前の月</button>
+        <button className="calendar_date btn this_month" onClick={() => setTargetDate(new Date())}>今月</button>
+        
     </div>
     )
 }
