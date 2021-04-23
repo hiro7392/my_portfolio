@@ -14,6 +14,7 @@ import List from "./List";
 import Add from "./Add";
 import Detail from "./Detail"
 import Ability from "./Ability"
+import Calendar from "./Calendar"
 //import Dropd from "./part/Dropd"
 //import App2 from "./auth/App2"
 //import InputForm from './Firebase';
@@ -68,6 +69,10 @@ class App extends React.Component{
         this.setState({openNumber:2});
         this.setState({showProfile:false});
       }
+      clickCalendar(){
+        this.setState({openNumber:3});
+        this.setState({showProfile:false});
+      }
 
       moveToLink(url){
         this.props.history.push(url);
@@ -92,6 +97,7 @@ class App extends React.Component{
       let add=<Add/>;
       let detail=<Detail/>;
       let ability=<Ability/>;
+      let calendar=<Calendar/>;
       //let app2=<App2/>;
       return (
         
@@ -100,6 +106,7 @@ class App extends React.Component{
           <button onClick={()=>{this.clickProfile()}} className="btn about">Home</button>
           <button onClick={()=>{this.clickSkills()}}  className="btn Skills">List</button>
           <button onClick={()=>{this.clickChart()}} className="btn products">Chart</button>
+          <button onClick={()=>{this.clickCalendar()}} className="btn calendar">Calendar</button>
         </div>
         <div className="contents">
 
@@ -120,6 +127,7 @@ class App extends React.Component{
           
           <div style={{display:this.state.openNumber!==5 ? 'none' : '' }}>{add}</div>
           
+          <div style={{display:this.state.openNumber!==3 ? 'none' : '' }}>{calendar}</div>
           
         </div>
         <button onClick={()=>{this.switchProfile()}} className="btn owner"
