@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import firebase from "firebase";
 import "firebase/storage";
 import Add from "./Add";
-
+import {confirmAlert} from 'react-confirm-alert';
 
 class List extends Component {
   constructor(props) {
@@ -54,8 +54,12 @@ class List extends Component {
     
     var ID=this.state.data[i].id;    //習慣[i]のID
     let ref = db.ref("routines/"+ID);
-    if (this.state.lastID == -1) {
-      return;
+    if (this.state.data == null || this.state.data.length == 0) {
+      return [
+        <tr key="0">
+            <th>NO DATA</th>
+        </tr>
+      ];
     }
     var cnt=this.state.data[i].count;
     cnt=cnt+1
@@ -68,12 +72,17 @@ class List extends Component {
     p.update({"experiment":this.state.player.experiment+this.state.data[i].skillPoint.experiment});
 
   }
+  
   deleteFireData(i) {
-    alert('本当に消去しますか?')
     var id=this.state.data[i].id;
     let db = firebase.database();
     let ref = db.ref("routines/" + id);
-    ref.remove();
+
+    let result=window.confirm('本当に削除しますか？')
+    if(result){
+      ref.remove();
+    }
+    
   }
 
 
@@ -110,8 +119,10 @@ class List extends Component {
     
     
     let create=<Add/>;
-    if (this.state.data.length == -1) {
-        this.getFireData();
+    if (this.state.data == null || this.state.data.length == 0) {
+      return [
+          <div>{create}</div>
+      ];
     }
     return (
         <div>
