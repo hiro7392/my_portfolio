@@ -26,11 +26,8 @@ function Calendar() {
 
     return (
     <div className="calendar_content">
-        {/* 追加ここから */}
-        <div>
-        
-        {/* 追加ここまで */}
 
+        <div>
         <h1 className="calendar_title">{format(targetDate, 'y年M月')}</h1>
         </div>
         <table className="calendar_days">
