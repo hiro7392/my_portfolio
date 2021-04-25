@@ -5,7 +5,7 @@ body {
 .main{
   width:60%;
   height:80%;
-  padding:3% 3% ;
+  padding:3% 3% 2% 3%;
 
   margin:auto auto;
   background: rgba(20, 20, 52, 0.9);
@@ -20,17 +20,20 @@ body {
   padding-left:4%;
 }
 .Profile{
-  margin:25% auto;
+  margin:10% auto;
 }
 .name{
   margin:5% auto;
 }
-.headlinks{
-  text-align:left;
-  
-}
+
 .profile_content{
   /*text-align:left;*/
+}
+.research_article1{
+  color:white;
+}
+.research_article1:hover{
+  color: blueviolet;
 }
 
 .title{
@@ -40,6 +43,13 @@ body {
 .skills{
   margin:10% auto;
 }
+.product{
+  margin:10% auto;
+}
+.about{
+  margin:10% auto;
+}
+
 
 .about_title{
   color:rgba(250,100,10,1);
@@ -48,6 +58,7 @@ body {
 .home_name{
   font-family:sans-serif;
 }
+
 /*
 .btn{
   display: inline-block;
@@ -68,7 +79,7 @@ body {
   appearance: none;
 }
 */
-.btn {
+.btn{
   font-family:sans-serif;
   font-weight: 10;
   padding: 1% 2%;
@@ -76,9 +87,31 @@ body {
   display: inline-block;
   opacity: 0.8;
   border-radius: 5px;
+  font-size: 120%;
+  transition: all 0.5s;
+  cursor:pointer;
+  margin-right:2%;
+  border-color: rgba(20, 20, 52, 0.9);
+}
+.btn:hover{
+  background-color: aqua;
+
+}
+
+
+.btn_links{
+  font-family:sans-serif;
+  font-weight: 10;
+  padding: 1% 2%;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  
+  border-radius: 5px;
   font-size: 15px;
   transition: all 0.5s;
   cursor:pointer;
+  margin-top:5%;
   margin-left:2%;
   border-color: rgba(20, 20, 52, 0.9);
 }
@@ -98,20 +131,30 @@ body {
 .home_name{
   color:rgba(150,10,150,1);
 }
-.about{
+.home{
   background-color:rgba(150,10,150,1);
 }
 
 .Skills{
   background-color:rgba(40,255,100,1);
 }
+.Product{
+  background-color:rgb(250, 234, 10);
+  color: black;
+}
+
+.Product-title{
+  color:rgb(250, 234, 10);
+}
+.About{
+  background-color:rgba(250,100,10,1);
+}
+
 .links{
   margin-top: 5%;
   font-size: 25px;
 }
-.products{
-  background-color:rgba(250,100,10,1);
-}
+
 .github{
   background-color: rgba(150,10,150,1);
   border-radius: 10px;
@@ -128,6 +171,7 @@ body {
 .HatenaBlog{
   background-color:rgba(40,255,100,1);
 }
+
 /*
 .btn:active {
   position: relative;
