@@ -9,7 +9,7 @@ import React from 'react';
 //import { Ionicons, FontAwesome } from "@expo/vector-icons";
 //import Icon from 'react-native-vector-icons/FontAwesome';
 import Profile from './Profile';
-import Products from './Products';
+import About from './about';
 import List from "./List";
 import Add from "./Add";
 import Detail from "./Detail"
@@ -91,7 +91,7 @@ class App extends React.Component{
     render()
     {
       let home=<Profile/>;
-      let about=<Products/>;
+      let about=<About/>;
       let lader=<GradeRader/>;
       let list=<List/>;
       let add=<Add/>;

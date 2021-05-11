@@ -3,7 +3,6 @@ import firebase from "firebase";
 import "firebase/storage";
 import Add from "./Add";
 import {confirmAlert} from 'react-confirm-alert';
-
 //カレンダーに日付を記録する用
 import getDate from 'date-fns/getDate'
 import getDay from 'date-fns/getDay'
@@ -59,12 +58,8 @@ class List extends Component {
     var ID=this.state.data[i].id;    //習慣[i]のID
     let ref = db.ref("routines/"+ID);
 
-    let done_date=db.ref("routines/"+ID+"/done");
-    let today= new Date();
     
-    done_data.set({
-        done_date:today.getDay
-    });
+
 
     if (this.state.data == null || this.state.data.length == 0) {
       return [
@@ -73,8 +68,22 @@ class List extends Component {
         </tr>
       ];
     }
+    //習慣の合計実行回数をインクリメント
     var cnt=this.state.data[i].count;
-    cnt=cnt+1
+    cnt=cnt+1;
+
+    var date= new Date();
+    var doneDate=date.toLocaleDateString();
+
+    var postListRef=db.ref("routines/"+ ID +"/done/");
+    var newDoneRef=postListRef.push();
+    var strCnt=String(cnt);
+    newDoneRef.set({
+      strCnt:doneDate
+    });
+
+
+    //playerのステータスをアップデート
     ref.update({"count":cnt});
     let p=db.ref("player/");
     p.update({"HP":(this.state.player.HP+this.state.data[i].skillPoint.HP)});
