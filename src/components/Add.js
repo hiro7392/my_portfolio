@@ -61,8 +61,6 @@ class Add extends Component {
     });
   }
 
-  
-
   doAction(e) {
     this.addFireData();
   }
@@ -73,7 +71,7 @@ class Add extends Component {
     let self = this;
     ref
       .orderByKey()
-      .limitToLast(1)
+      .limitToLast(5) // 記録する習慣の限界値
       .on("value", snapshot => {
         let res = snapshot.val();
         for (let i in res) {
@@ -135,20 +133,20 @@ class Add extends Component {
                   onChange={this.doChangeName}
                   value={this.state.name_str}
         />
-           <table class="table list">
-             <thead class="thead-light">
-                 <tr>
-                     
-                     <th scope="col">体力</th>
-                     <th scope="col">メンタル</th>
-                     <th scope="col">知識</th>
-                     <th scope="col">経験値</th>
-                     <th scope="col">技術力</th>
-                 </tr>
-             </thead>
-             <tbody>
-               
-               <td className="cnt">
+            <table class="table list">
+              <thead class="thead-light">
+                  <tr>
+                      
+                      <th scope="col">体力</th>
+                      <th scope="col">メンタル</th>
+                      <th scope="col">知識</th>
+                      <th scope="col">経験値</th>
+                      <th scope="col">技術力</th>
+                  </tr>
+              </thead>
+              <tbody>
+                
+                <td className="cnt">
                   <input className="in"
                   type="value"
                   placeholder="HP"

@@ -2,12 +2,6 @@
 
 import React from 'react';
 
-//import { withRouter } from 'react-router';
-//import { Link } from "react-router-dom";
-//import Contentbox from './Contentbox';
-//import {View } from 'react-native';
-//import { Ionicons, FontAwesome } from "@expo/vector-icons";
-//import Icon from 'react-native-vector-icons/FontAwesome';
 import Profile from './Profile';
 import About from './about';
 import List from "./List";
@@ -78,7 +72,7 @@ class App extends React.Component{
         this.props.history.push(url);
       }
       switchProfile(){
-        if(this.showProfile){
+        if(this.state.showProfile){
           this.setState({showProfile:false});
         }
         else{
