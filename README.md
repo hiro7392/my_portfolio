@@ -1,5 +1,5 @@
 ## 自己紹介用のページです
-ここからアクセスできます
+
 
 Reactで勉強をかねて作成しました
 AWS Amplifyにデプロイしてあります<br>https://aws.amazon.com/jp/amplify/console/
