@@ -1,7 +1,7 @@
 import React from 'react';
 //import { withRouter } from 'react-router';
 //import { Link } from "react-router-dom";
-import Contentbox from './Contentbox';
+//import Contentbox from './Contentbox';
 //import {View } from 'react-native';
 //import { Ionicons, FontAwesome } from "@expo/vector-icons";
 //import Icon from 'react-native-vector-icons/FontAwesome';
@@ -10,7 +10,7 @@ import Skills from './Skills';
 import About from './About';
 import Product from './Product';
 
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
